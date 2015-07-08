@@ -14,6 +14,7 @@ URL:		https://github.com/papyros/settings-app
 
 Source0:	%{name}-%{version}-%{snap}.tar.xz
 BuildRequires:	qt5-devel
+BuildRequires:	extra-cmake-modules5
 
 %description
 The system settings app for Papyros.
