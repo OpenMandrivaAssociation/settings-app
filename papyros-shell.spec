@@ -1,26 +1,29 @@
-%define snap 20150709
+%define snap %nil
 %define debug_package %nil
 %define debugcflags %nil
 
 Summary:	Papyros desktop shell
 Name:		settings-app
-Version:	0.0.5
-Release:	1.%{snap}.2
+Version:	0.1.0
+Release:	1
 License:	GPLv2
 Group:		Graphical desktop/Other
 URL:		https://github.com/papyros/settings-app
 # git clone https://github.com/papyros/settings-app.git
-# git archive --format=tar --prefix settings-app-0.0.5-$(date +%Y%m%d)/ HEAD | xz -vf > settings-app-0.0.5-$(date +%Y%m%d).tar.xz
+# git archive --format=tar --prefix settings-app-0.1.0-$(date +%Y%m%d)/ HEAD | xz -vf > settings-app-0.1.0-$(date +%Y%m%d).tar.xz
 
-Source0:	%{name}-%{version}-%{snap}.tar.xz
-BuildRequires:	qt5-devel
-BuildRequires:	extra-cmake-modules5
+Source0:	%{name}-%{version}.tar.gz
+BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(Qt5Quick)
+BuildRequires:	pkgconfig(Qt5Qml)
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(papyros)
 
 %description
 The system settings app for Papyros.
 
 %prep
-%setup -qn %{name}-%{version}-%{snap}
+%setup -q
 
 %build
 %cmake_qt5
