@@ -17,7 +17,7 @@ BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Quick)
 BuildRequires:	pkgconfig(Qt5Qml)
 BuildRequires:	cmake(ECM)
-BuildRequires:	cmake(papyros)
+BuildRequires:	cmake(Papyros)
 
 %description
 The system settings app for Papyros.
@@ -30,7 +30,7 @@ The system settings app for Papyros.
 %make
 
 %install
-%makeinstall_std -C build INSTALL_ROOT=%{buildroot}
+%makeinstall_std -C build
 
 %files
 %{_bindir}/papyros-settings
