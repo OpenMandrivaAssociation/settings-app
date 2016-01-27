@@ -34,5 +34,7 @@ The system settings app for Papyros.
 
 %files
 %{_bindir}/papyros-settings
+%{_datadir}/appdata/io.papyros.Settings.appdata.xml
+%{_datadir}/applications/io.papyros.Settings.desktop
 %{_datadir}/papyros-settings/app/
 %{_datadir}/papyros-settings/modules/
